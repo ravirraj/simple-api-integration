@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
   } catch (err) {
     console.error("Error in GET /posts:", err);
     res.status(err.status || 500).json({
-      error: err.message || "Something went wrong",
+      error: err.message || "Error getting posts",
     });
   }
 });
@@ -25,7 +25,7 @@ router.get("/:id", async (req, res) => {
   } catch (err) {
     console.error("Error in GET /posts/:id:", err);
     res.status(err.status || 500).json({
-      error: err.message || "Something went wrong",
+      error: err.message || "Error getting post by ID",
     });
   }
 });
